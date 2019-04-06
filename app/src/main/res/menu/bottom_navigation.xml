@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/oneFragment"
+        android:enabled="true"
+        android:icon="@mipmap/bb_cream"
+        android:title="BB霜"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/twoFragment"
+        android:enabled="true"
+        android:icon="@mipmap/eye_shadow"
+        android:title="眼影"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/threeFragment"
+        android:enabled="true"
+        android:icon="@mipmap/nail_polish"
+        android:title="指甲油"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/fourFragment"
+        android:enabled="true"
+        android:icon="@mipmap/lipstick"
+        android:title="口红"
+        app:showAsAction="ifRoom" />
+</menu>
