@@ -11,7 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import androidx.navigation.Navigation;
 import mylife.is.it.jitpack.R;
 import mylife.is.it.jitpack.adapter.TestAdapter;
 import mylife.is.it.jitpack.model.TestModel;
@@ -22,6 +24,7 @@ public class FourFragment extends Fragment {
     private TestModel mViewModel;
     private RecyclerView recyclerView;
     private TestAdapter adapter;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -34,6 +37,13 @@ public class FourFragment extends Fragment {
         adapter = new TestAdapter();
         recyclerView = view.findViewById(R.id.recycler);
         recyclerView.setAdapter(adapter);
+        final Button button = view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(button).popBackStack();
+            }
+        });
     }
 
     @Override

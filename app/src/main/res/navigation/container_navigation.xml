@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/oneFragment"
         android:name="mylife.is.it.jitpack.fragment.OneFragment"
-        android:label="fragment_one"
+        android:label="BB霜"
         tools:layout="@layout/fragment_one">
         <action
             android:id="@+id/action_oneFragment_to_fourFragment"
@@ -21,16 +21,16 @@
     <fragment
         android:id="@+id/twoFragment"
         android:name="mylife.is.it.jitpack.fragment.TwoFragment"
-        android:label="fragment_two"
+        android:label="眼影"
         tools:layout="@layout/fragment_two" />
     <fragment
         android:id="@+id/threeFragment"
         android:name="mylife.is.it.jitpack.fragment.ThreeFragment"
-        android:label="fragment_three"
+        android:label="指甲油"
         tools:layout="@layout/fragment_three" />
     <fragment
         android:id="@+id/fourFragment"
         android:name="mylife.is.it.jitpack.fragment.FourFragment"
-        android:label="four_fragment"
+        android:label="口红"
         tools:layout="@layout/four_fragment" />
 </navigation>
