@@ -19,9 +19,9 @@ public class TestModel extends AndroidViewModel {
     LiveData liveData = new MutableLiveData<String>();
 
     public LiveData build = new LivePagedListBuilder(App.getInstance().getDao().getTestList(), new PagedList.Config.Builder()
-            .setPageSize(15)
-            .setEnablePlaceholders(true)
-            .setPrefetchDistance(150)
-            .setInitialLoadSizeHint(15)
+            .setPageSize(15) // 分页加载的数量
+            .setEnablePlaceholders(true) // 是否启用占位符
+            .setPrefetchDistance(150) // 预加载距离
+            .setInitialLoadSizeHint(15)  // 初始化加载的数量
             .build()).build();
 }
