@@ -1,5 +1,6 @@
 package mylife.is.it.jitpack;
 
+import android.app.PendingIntent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
+
 import mylife.is.it.jitpack.room.TestBean;
 import mylife.is.it.jitpack.room.TestDao;
 
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         NavController navController = Navigation.findNavController(this, R.id.container);
         NavigationUI.setupWithNavController(navigationView, navController);
-        NavigationUI.setupWithNavController(toolbar,navController);
+        NavigationUI.setupWithNavController(toolbar, navController);
         for (int i = 0; i < 100; i++) {
             testBeans.add(i, new TestBean("name" + i, "age" + i));
         }
@@ -68,6 +70,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
 
+    }
+
+
+    private PendingIntent getPendingIntent() {
+        return Navigation.findNavController(this, R.id.button)
+                .createDeepLink()
+                .setGraph(R.navigation.container_navigation)
+                .setDestination(R.id.twoFragment)
+                .createPendingIntent();
     }
 }
 

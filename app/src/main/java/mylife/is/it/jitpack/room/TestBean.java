@@ -2,12 +2,13 @@ package mylife.is.it.jitpack.room;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 @Entity(tableName = "test")
 public class TestBean {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "_id")
+    @ColumnInfo(name = "_id", typeAffinity = ColumnInfo.INTEGER)
     public int userID;
     private String name;
 
@@ -33,4 +34,10 @@ public class TestBean {
     public void setAge(String age) {
         this.age = age;
     }
+
+    /**
+     * 忽略不会存到表中
+     */
+    @Ignore
+    private int ignore;
 }

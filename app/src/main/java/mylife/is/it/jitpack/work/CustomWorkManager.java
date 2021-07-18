@@ -7,6 +7,10 @@ import androidx.work.Data;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
+/**
+ * 1.非及时任务
+ * 2.任务一定执行
+ */
 public class CustomWorkManager extends Worker {
     public CustomWorkManager(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
